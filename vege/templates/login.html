@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+<!-- <p></p>  -->
+{% block start %}
+<!-- <p>hii</p> -->
+<div class="contains mt-5">
+  <form
+    class="col-6 mx-auto card p-3 shadow-lg"
+    method="post"
+    enctype="multipart/form-data"
+  >
+    {% csrf_token %}
+    <center><h2>User Login</h2></center>
+    <hr />
+    <div>
+      <label for="username" class="form-label">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="username"
+        required
+      />
+    </div>
+    <div>
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="password"
+        required
+      />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Login</button>
+    <center>
+      Don't have an account?
+      <p><a href="/user_signup/">Signup</a></p>
+    </center>
+  </form>
+</div>
+{% endblock %}
